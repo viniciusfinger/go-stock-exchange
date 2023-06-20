@@ -1,0 +1,9 @@
+{
+    "order_id": "1",
+    "investor id": "Mari",
+    "asset id": "asset1",
+    "current_shares": 10,
+    "shares": 5,
+    "price": 5.0,
+    "order_type": "SELL"
+}

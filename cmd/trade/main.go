@@ -24,7 +24,7 @@ func main() {
 	configMap := &ckafka.ConfigMap{
 		"bootstrap.servers": "host.docker.internal:9094",
 		"group.id":          "myGroup",
-		"auto.offset.reset": "earliest",
+		"auto.offset.reset": "latest", //pega só as mensagens que nasceram depois que subiu o programa
 	}
 
 	producer := kafka.NewKafkaProducer(configMap)
@@ -62,6 +62,9 @@ func main() {
 	for res := range ordersOut {
 		orderOutput := transformer.TransformOutput(res)
 		outputJson, err := json.Marshal(orderOutput)
+
+		fmt.Print("Negociacao realizada: ")
+		fmt.Println(string(outputJson))
 
 		if err != nil {
 			fmt.Println(err)
