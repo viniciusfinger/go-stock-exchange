@@ -29,7 +29,6 @@ func TestBuyAsset(t *testing.T) {
 	orderChan <- order
 
 	// add sell order
-
 	order2 := NewOrder("2", investor2, asset1, 5, 5, "BUY")
 	orderChan <- order2
 	wg.Wait()
