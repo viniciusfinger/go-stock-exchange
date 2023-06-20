@@ -1,4 +1,4 @@
-package gto
+package dto
 
 type TradeInput struct {
 	OrderID       string  `json:"order_id"`
@@ -11,14 +11,14 @@ type TradeInput struct {
 }
 
 type OrderOutput struct {
-	OrderID           string               `json:"order_id"`
-	InvestorID        string               `json:"investor_id"`
-	AssetID           string               `json:"asset_id"`
-	OrderType         string               `json:"order_type"`
-	Status            string               `json:"status"`
-	Partial           int                  `json:"partial"`
-	Shares            int                  `json:"shares"`
-	TransactionOutput []*TransactionOutput `json:"transaction_output"`
+	OrderID            string               `json:"order_id"`
+	InvestorID         string               `json:"investor_id"`
+	AssetID            string               `json:"asset_id"`
+	OrderType          string               `json:"order_type"`
+	Status             string               `json:"status"`
+	Partial            int                  `json:"partial"`
+	Shares             int                  `json:"shares"`
+	TransactionsOutput []*TransactionOutput `json:"transaction_output"`
 }
 
 type TransactionOutput struct {
