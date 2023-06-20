@@ -1,4 +1,4 @@
-module market
+module github.com/viniciusfinger/bolsa-valores
 
 go 1.20
 
